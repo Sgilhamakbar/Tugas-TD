@@ -1,0 +1,149 @@
+
+
+
+
+
+
+
+
+
+print ("_"*60)
+print ("\t   Laporan Praktikum Transformasi Digital")
+
+#Program menghitung luas balok
+#fungsi menghitung luas dan volume kubus
+def luaspermukaankubus() :
+    print ("Menghitung Luas Permukaan Kubus")
+    s1 = float(input("Masukkan panjang rusuk kubus = "))
+    s2 = float(input("Masukkan panjang rusuk kubus = "))
+    luas = 6*s1*s2
+    print ("Luas permukaan kubus adalah = ", luas, "cm²")
+    return luas
+
+def volumekubus () :
+    print ("Menghitung Volume Kubus")
+    s1 = float(input("Masukkan panjang rusuk1 = "))
+    s2 = float(input("Masukkan panjang rusuk2 = "))
+    s3 = float(input("Masukkan panjang rusuk3 = "))
+    volume = s1*s2*s3
+    print ("Volume kubus adalah = ", volume, "cm³")
+    return volume
+
+#fungsi menghitung luas dan vokume tabung
+def luaspermukaantabung ():
+    print ("Menghitung Luas Permukaan Tabung")
+    r = float(input("Masukkan jari-jari tabung = "))
+    t = float(input("Masukkan tinggi tabung = "))
+    luas = 2*3.14*r*(r*t)
+    print ("Luas permukaan tabung adalah, ", luas, "cm²")
+    return luas
+
+def volumetabung ():
+    print ("Menghitung Volume Tabung")
+    r = float(input("Masukkan jari-jari tabung = "))
+    t = float(input("Masukkan tinggi tabung = "))
+    volume = 3.14*r*r*t
+    print ("Volume tabung adalah, ", volume, "cm³")
+    return volume
+
+#fungsi menghitung luas dan volume balok
+def luaspermukaanbalok () :
+    print ("Menghitung Luas Permukaan Balok")
+    p = int(input("Masukkan panjang balok = "))
+    l = int(input("Masukkan lebar balok = "))
+    t = int(input("Masukkan tinggi balok = "))
+    luas = (2*p*l) + (2*p*t) + (2*l*t)
+    print ("Luas permukaan balok adalah = ", luas, "cm²")
+    return luas
+
+def volumebalok () :
+    print ("Menghitung Volume Balok")
+    p = float(input("Masukkan panjang balok = "))
+    l = float(input("Masukkan lebar balok = "))
+    t = float(input("Masukkan tinggi balok = "))
+    volume = p*l*t
+    print ("Volume balok adalah = ", volume, "cm³")
+    return volume
+
+#fungsi menghitung luas dan volume kerucut
+def luaspermukaankerucut () :
+    print ("Menghitung Luas Permukaan Kerucut")
+    r = float(input("Masukkan jari-jari kerucut = "))
+    s = float(input("Masukkan panjang garis pelukisnya = "))
+    t = float(input("Masukkan tinggi kerucut = "))
+    luas = 3.14*r*(r+s)
+    print ("Luas kermukaan kerucut adalah = ", luas, "cm²")
+    return luas
+
+def volumekerucut () :
+    print ("Menghitung Volume Kerucut")
+    r = float(input("Masukkan jari-jari kerucut = "))
+    t = float(input("Masukkan tinggi kerucut = "))
+    volume = 1/3*(3.14*r*r*t)
+    print ("Volume kerucut adalah = ", volume, "cm³")
+    return volume
+
+#fungsi menghitung luas dan volume bola
+def luaspermukaanbola () :
+    print ("Menghitung Luas Permukaan Bola")
+    r = float(input("Masukkan jari-jari Bola = "))
+    luas = 4*3.14*(r*r)
+    print ("Luas permukaan bola adalah = ", luas, "cm²")
+    return luas
+
+def volumebola () :
+    print ("Menghitung Volume Bola")
+    r = float(input("Masukkan jari-jari Bola  = "))
+    volume = 4/3*(3.14*(r*r*r))
+    print ("Volume bola adalah = ", volume, "cm³")
+    return volume
+
+#perintah perulangan
+lagi = "y"
+while lagi == "y" :
+        print ("\t\t     Selamat Datang\n\tProgram Menghitung Luas dan Volume Bangun Ruang")
+        print ("_"*60)
+        
+        print ()
+        
+#Menu operasi perhitungan
+        print ("\t|Menu Operasi|")
+        print ("1. Menghitung Luas Permukaan Kubus\n2. Menghitung Volume Kubus\n3. Menghitung Luas Permukaan Tabung\n4. Menghitung Volume Tabung\n5. Menghitung Luas Permukaan Balok\n6. Menghitung Volume Balok\n7. Menghitung Luas Permukaan Kerucut\n8. Menghitung Volume Kerucut\n9. Menghitung Luas Permukaan Bola\n10. Menghitung Volume Bola\n11. Close")
+        
+        print ()
+
+        main = input("Pilih Perhitungan Operasi Bangun Ruang : ")
+        print ()
+        if main == "1":
+            luaspermukaankubus ()
+        elif main == "2":
+            volumekubus ()
+        elif main == "3":
+            luaspermukaantabung ()
+        elif main == "4":
+            volumetabung ()
+        elif main == "5":
+            luaspermukaanbalok ()
+        elif main == "6":
+            volumebalok ()
+        elif main == "7":
+            luaspermukaankerucut ()
+        elif main == "8":
+            volumekerucut ()
+        elif main == "9":
+            luaspermukaanbola ()
+        elif main == "10":
+            volumebola ()
+        elif main == "11":
+            break
+        else :
+            print ("Hasilnya adalah = operasi bilangan tidak dikenali!")
+            
+            print ()
+    
+        ulang = input("\t   Mau Menghitung Lagi? [y/t] : ")
+        if ulang == "y":
+            main
+        else :
+            exit ()
+
